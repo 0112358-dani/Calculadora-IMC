@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC - Medida de peso</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Digite o seu peso:</h1> <input type="number" name="pesotxt"  id="pesotxt">
+        <h2>Digite a sua altura:</h2><input type="number" name="alturatxt" id="alturatxt">
+        
+
+    </header>
+    <section>
+        <br><input type="button" value="Verificar" onclick="calcular()"></br>
+        <div id="res"></div>
+    </section>
+    <script>
+        function calcular() {
+            var txtpeso = document.querySelector('id#pesotxt')
+            var res = document.getElementById('res')
+            var peso = Number(pesotxt.value)
+            var txtaltura = document.querySelector('id#alturatxt')
+            var altura = Number(alturatxt.value)
+            var c = peso / (altura * altura);
+            res.innerHTML = `<p>O seu peso é: ${peso} <br>e altura:${altura}</br><br>IMC:${c}</br></p>`
+            if (c <= 18) {
+                res.innerHTML += `<p>Você está na classificação: Abaixo do peso.</p>`
+            
+            }else 
+               if    (c > 18 && c <= 24) {
+              res.innerHTML += `<p>Você está na classificação: Peso "normal".</p>`
+            
+            }else       
+              if   (c >= 25 && c <= 29) {
+               res.innerHTML += `<p>Você está na classificação: Sobrepeso.</p>`
+            
+            }else
+               if
+              (c >=30 && c <= 39) {
+             res.innerHTML += `<p>Você está na classificação: Obesidade.</p>`   
+            
+            }else
+                if  
+               (c >= 40) {
+             res.innerHTML += `<p>Você está na classificação: Obesidade morbida.</p>`
+            
+            
+            }
+        
+        }   
+            
+        
+
+
+    </script>
+</body>
+</html>

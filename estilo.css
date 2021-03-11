@@ -1,0 +1,17 @@
+body  {
+    background: brown;
+}
+
+header {
+    font-size: medium;
+    color: burlywood;
+    border-radius: 5px;
+    text-align: center;
+   
+}
+
+section {
+    font: 40pt Arial;
+    color:chocolate;
+    text-align: center;
+}
